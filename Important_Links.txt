@@ -1,1 +1,18 @@
 https://stackoverflow.com/questions/54907549/keep-only-selected-keys-in-every-object-from-array  -- to get specific key value from array
+
+// to get specific keys 
+const keys_to_keep = ["name", "population","id"];
+  const redux = (array) =>
+    array.map((o, i) =>
+      keys_to_keep.reduce((acc, curr) => {
+        acc[curr] = o[curr];
+        return acc;
+      }, {})
+    );
+
+  const column_data = redux(newData.data);
+  
+  // to add id or index key in exitsing array
+  column_data.forEach(
+    (item, index) => (item.id = index + 1)
+  );
