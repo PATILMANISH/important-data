@@ -16,3 +16,6 @@ const keys_to_keep = ["name", "population","id"];
   column_data.forEach(
     (item, index) => (item.id = index + 1)
   );
+
+
+https://www.npmjs.com/package/dropzone-ui ---- NPM Package for Drag & Drop Files -- ReactJS
